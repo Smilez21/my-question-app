@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# question-app
+My Question App
+Welcome to My Question App! This is a simple application built with React for managing questions and options.
+Before you begin, ensure you have the following installed on your machine:
 
-First, run the development server:
+Node.js: Download Node.js
+npm (Node Package Manager): This is installed automatically with Node.js
+Getting Started
+To get started with this project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Clone the repository to your local machine:
+git clone https://github.com/Smilez21/my-question-app.git
+Navigate to the project directory:
+cd question-app
+Install project dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+npm install
+Running the Application
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Once you have installed the dependencies, you can run the application locally by following these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the development server:
 
-## Learn More
+npm start
+Open your web browser and visit http://localhost:3000 to view the application.
+Usage
+Creating a Question: Enter your question and options in the input fields provided and click on the "Create Question" button.
+Deleting a Question: To delete a question, click on the delete icon next to the question you want to delete. A confirmation modal will appear, asking you to confirm the deletion.
+Editing a Question: To edit a question, click on the edit icon next to the question you want to edit. This will open a modal where you can modify the question and its options.
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Fork the repository.
+Create a new branch for your feature or bug fix: git checkout -b feature-name.
+Make your changes and commit them: git commit -m 'Add new feature'.
+Push to the branch: git push origin feature-name.
+Submit a pull request.

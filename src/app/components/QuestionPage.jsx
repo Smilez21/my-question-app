@@ -144,13 +144,13 @@ const QuestionsPage = () => {
       <h1 className="text-3xl font-bold mb-8 text-center">My Question App</h1>
       {error && <div className="text-red-500 mb-4 text-center">{error}</div>}
       {loading && <div className="text-green-600 mb-4 text-center">Loading...</div>}
-      <div className="mb-8">
+      <div className="mb-8 text-black">
         <input
           type="text"
           placeholder="Enter new question"
           value={newQuestion}
           onChange={(e) => setNewQuestion(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mb-2 w-full focus:outline-none focus:border-blue-500"
+          className="border border-gray-300 rounded-md p-2 mb-2 w-full focus:outline-none focus:border-blue-500 text-black"
         />
         {newOptions.map((option, index) => (
           <input

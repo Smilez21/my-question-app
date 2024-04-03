@@ -1,5 +1,5 @@
 // pages/questions.js
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Question from "../components/Question";
@@ -103,6 +103,12 @@ const QuestionsPage = () => {
     setSelectedQuestionId(questionId);
   };
 
+  const editQuestion = (questionId) => {
+    const questionToEdit = questions[questionId];
+    setCurrentQuestion(questions[questionId]);
+    setShowEditModal(true); // Set showEditModal to true here
+  };
+
   const confirmDelete = async () => {
     setLoading(true);
     try {
@@ -127,12 +133,6 @@ const QuestionsPage = () => {
     setShowModal(false);
   };
 
-  const editQuestion = (questionId) => {
-    const questionToEdit = questions[questionId];
-    setCurrentQuestion(questionToEdit);
-    setEditMode(true);
-  };
-
   const saveEditedQuestion = async () => {
     fetchQuestions();
     setEditMode(false);
@@ -143,14 +143,16 @@ const QuestionsPage = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">My Question App</h1>
       {error && <div className="text-red-500 mb-4 text-center">{error}</div>}
-      {loading && <div className="text-green-600 mb-4 text-center">Loading...</div>}
+      {loading && (
+        <div className="text-green-600 mb-4 text-center">Loading...</div>
+      )}
       <div className="mb-8 text-black">
         <input
           type="text"
           placeholder="Enter new question"
           value={newQuestion}
           onChange={(e) => setNewQuestion(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mb-2 w-full focus:outline-none focus:border-blue-500 text-black"
+          className="border border-gray-300 rounded-md p-2 mb-2 w-full focus:outline-none focus:border-blue-500 text-blck"
         />
         {newOptions.map((option, index) => (
           <input
@@ -196,7 +198,6 @@ const QuestionsPage = () => {
         <Modal title="Edit Question" onClose={closeModal}>
           <EditModal
             currentQuestion={currentQuestion}
-            setCurrentQuestion={setCurrentQuestion}
             saveEditedQuestion={saveEditedQuestion}
             closeModal={closeModal}
           />
